@@ -7,5 +7,6 @@
 ehthumbs.db
 *[Tt]humbs.db
 *.Trashes
+*.scss
 # Ignore npm packages
 node_modules/

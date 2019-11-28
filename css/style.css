@@ -2,17 +2,19 @@
 html {
   scroll-behavior: smooth;
 }
+
 .site-header {
   flex-wrap: nowrap;
   display: flex;
   justify-content: space-between;
-  padding-bottom: 0.5rem;
-  padding-top: 1rem;
   align-items: center;
   font-family: "Raleway";
-  width: 100vw;
-  height: auto;
+  width: 100%;
+  height: inherit;
+  margin: 0;
+  padding: 2% 0;
 }
+
 .screen-reader {
   display: none;
 }
@@ -26,17 +28,16 @@ html {
 }
 
 /* Logo */
-
 .logo {
   order: 1;
-  width: 15%;
+  width: auto;
+  height: 5vmax;
+  padding-left: 1%;
 }
-.logo img {
-  max-width: 120px;
-}
+
 img {
-  height: auto;
-  max-width: 100%;
+  height: 100%;
+  width: auto;
 }
 
 /* Cart */
@@ -44,12 +45,8 @@ img {
   cursor: pointer;
   text-align: right;
   order: 3;
-  width: 15%;
-  width: 62px;
-}
-img {
-  height: auto;
-  max-width: 100%;
+  width: auto;
+  height: 5vmax;
 }
 
 /* Navigation Bar */
@@ -60,6 +57,7 @@ img {
   align-self: center;
   flex-basis: auto;
 }
+
 .main-navigation li {
   font-size: 0.9rem;
   margin: 0 0.5rem;
@@ -68,6 +66,7 @@ img {
   margin-bottom: 0px;
   margin-left: 0.5rem;
 }
+
 .main-navigation li {
   display: inline-block;
   font-weight: 700;
@@ -78,37 +77,31 @@ img {
   margin-left: 1rem;
   text-transform: uppercase;
 }
+
 li {
   display: list-item;
 }
+
 a,
 h3 {
   color: #e2574c;
   text-decoration: none;
 }
-/* Section Banner */
 
+/* Section Banner */
 .banner {
-  background: linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0.25) 0,
-      rgba(0, 0, 0, 0.25)
-    ),
-    url(../images/banner-girl.png) no-repeat center 60px,
-    url(../images/flower-bkgd.jpg) repeat-x top;
-  background-size: cover, 32vh;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0, rgba(0, 0, 0, 0.25)), url(../images/banner-girl.png) no-repeat center 60px, url(../images/flower-bkgd.jpg) repeat-x top;
+  background-size: cover, 20vmax;
   background-position: center, bottom;
-  height: 400px;
+  height: 60vmax;
   position: relative;
   display: flex;
   text-align: center;
   justify-content: center;
   align-items: center;
+  flex-flow: column nowrap;
 }
-section {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-}
+
 .banner-text {
   color: #fff;
   font-weight: 700;
@@ -117,20 +110,20 @@ section {
   text-transform: uppercase;
   width: 80%;
 }
-.container {
-  max-width: 1240px;
-  margin: 0 auto;
-}
+
 .collection {
-  font-size: 1.25rem;
+  font-family: "Raleway Web", sans-serif;
+  font-size: 2vmax;
   margin-bottom: 1.5rem;
 }
+
 .banner-text.container {
   text-align: center;
 }
+
 .seasons {
   font-family: Playfair Display Web, serif;
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: 400;
   text-transform: none;
 }
@@ -138,24 +131,47 @@ section {
 /* Section About */
 .about {
   text-align: center;
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-content: center;
 }
-.about-text {
-  max-width: 720px;
+.about .about-text {
+  width: 50%;
+  margin: 0 auto;
 }
+.about h2 {
+  font-size: 3.2vmax;
+  font-weight: 200;
+}
+.about h2 span {
+  font-weight: 600;
+}
+.about p {
+  font-family: "Raleway Web", sans-serif;
+  font-size: 1.5vmax;
+  font-weight: 200;
+  line-height: 1.4;
+}
+
 section h2 {
   text-align: center;
 }
+
 h2 {
   font-size: 2.4rem;
   font-style: italic;
   margin-bottom: 1.5rem;
 }
+
 h1,
 h2,
 h3 {
   font-family: Playfair Display Web, serif;
   line-height: 1;
 }
+
 h2 {
   display: block;
   font-size: 1.5em;
@@ -164,15 +180,18 @@ h2 {
 
 /* Section Products */
 .products {
-  width: 1265px;
-  height: 644.5px;
+  width: 100%;
+  height: 50vmax;
   position: relative;
 }
+.products a {
+  font-family: "Raleway Web", sans-serif;
+  font-size: 2.3vmax;
+}
+
 .category-name a {
   color: #fff;
-  font-family: "Raleway Medium";
   font-size: 1.6rem;
-  text-shadow: 2px 2px 4px hsla(0, 0%, 39%, 0.8);
   text-transform: uppercase;
   align-content: center;
   align-items: center;
@@ -195,11 +214,12 @@ h2 {
   background-size: cover;
   background-position: right;
   background-image: url(../images/mens-category.jpg);
-  grid-column: 1 / span 2;
+  grid-column: 1/span 2;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .product-categories div:nth-child(2) {
   height: 100%;
   width: 100%;
@@ -210,6 +230,7 @@ h2 {
   align-items: center;
   justify-content: center;
 }
+
 .product-categories div:nth-child(3) {
   height: 100%;
   width: 100%;
@@ -220,6 +241,7 @@ h2 {
   align-items: center;
   justify-content: center;
 }
+
 .product-categories div:nth-child(4) {
   height: 100%;
   width: 100%;
@@ -230,6 +252,7 @@ h2 {
   align-items: center;
   justify-content: center;
 }
+
 .product-categories div:nth-child(5) {
   height: 100%;
   width: 100%;
@@ -240,19 +263,20 @@ h2 {
   align-items: center;
   justify-content: center;
 }
+
 .product-categories div:nth-child(6) {
   height: 100%;
   width: 100%;
   background-position: top right;
   background-size: cover;
   background-image: url(../images/womens-category.jpg);
-  grid-column: 3/ 5;
+  grid-column: 3/5;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-/* Section Featured */
 
+/* Section Featured */
 .featured .container {
   padding: 0;
   width: 100vw;
@@ -260,114 +284,107 @@ h2 {
   display: flex;
   flex-flow: row wrap;
 }
-.container {
-  padding: 0 2%;
-  padding-top: 0px;
-  padding-right: 2%;
-  padding-bottom: 0px;
-  padding-left: 2%;
-  margin: 0 auto;
-  margin-top: 0px;
-  margin-right: auto;
-  margin-bottom: 0px;
-  margin-left: auto;
-  width: 100%;
-}
 
 /* Section Newsletter */
-
 .newsletter {
-  background-image: linear-gradient(
-      rgba(0, 0, 0, 0.15) 0px,
-      rgba(0, 0, 0, 0.15)
-    ),
-    url(../images/wave-bkgd.jpg);
-  background-position-y: bottom;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.15) 0, rgba(0, 0, 0, 0.15)), url(../images/wave-bkgd.jpg) no-repeat bottom;
   background-size: cover;
-  background-repeat: no-repeat;
   color: #fff;
-  margin-bottom: 8px;
-  padding: 0 2%;
-  padding-top: 0px;
-  padding-right: 2%;
-  padding-bottom: 0px;
-  padding-left: 2%;
-  margin: 0 auto;
-  margin-top: 0px;
-  margin-right: auto;
-  margin-bottom: 0px;
-  margin-left: auto;
-  height: 343px;
-  width: 1214px;
+  width: 100%;
+  height: 11vmax;
+  padding: 1vmax 0 7vmax 0;
 }
-.sign-up-wrapper {
-  max-width: 720px;
+.newsletter .container {
+  width: 50%;
+  margin: 0 auto;
+  height: inherit;
   text-align: center;
 }
-#sign-up-form {
-  width: 67%;
+.newsletter .container h2 {
+  font-size: 3.1vmax;
 }
-#sign-up-form {
-  display: block;
-  margin: 2rem auto 0;
-  margin-top: 2rem;
-  margin-right: auto;
-  margin-bottom: 0px;
-  margin-left: auto;
-  position: relative;
-  width: 90%;
+.newsletter .container p {
+  font-family: "Raleway Web", sans-serif;
+  font-size: 1.5vmax;
+  line-height: 1.5;
+  text-align: center;
 }
-/* Footer */
+.newsletter .container #your-email {
+  padding: 2% 2%;
+  border-radius: 2em;
+  border-color: transparent;
+  line-height: 2;
+  width: 50%;
+  font-size: 1vmax;
+}
+.newsletter .container #subscribe {
+  background: #e2574c;
+  color: white;
+  padding: 1% 2%;
+  border-radius: 2em;
+  border-color: transparent;
+  line-height: 2;
+  transform: translateX(-8vmax);
+  font-size: 1vmax;
+}
 
-.colophon {
-  width: 250px;
-}
+/* Footer */
 .site-footer {
   background-color: #242424;
   color: #fff;
-  font-family: Playfair Display Web, serif;
-  padding-top: 4rem;
-  padding-right: 0px;
-  padding-bottom: 4rem;
-  padding-left: 0px;
+  font-family: "Playfair Display Web", serif;
   text-align: center;
   width: 100%;
-  height: 280px;
 }
-
-.site-footer-inner {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 2%;
-  padding-top: 0px;
-  padding-right: 2%;
-  padding-bottom: 0px;
-  padding-left: 2%;
+.site-footer .container {
+  display: grid;
+  grid-template-columns: auto auto;
+  width: 80%;
   margin: 0 auto;
-  margin-top: 0px;
-  margin-right: auto;
-  margin-bottom: 0px;
-  margin-left: auto;
+  padding: 5% 0;
+}
+.site-footer .container .colophon {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: left;
+  text-align: left;
+  line-height: 1.5;
+}
+.site-footer .container .colophon a {
+  color: white;
+  text-decoration: underline;
+}
+.site-footer .container .social {
+  text-align: right;
+  line-height: 1.5;
+  display: flex;
+  flex-flow: column nowrap;
+  align-self: right;
+  padding-left: 70%;
+}
+.site-footer .container .social li {
+  justify-content: stretch;
+  text-align: left;
 }
 
 footer {
   display: block;
 }
-.container {
-  width: 100%;
-}
-.site-footer a {
-  color: #fff;
-}
+
 .address {
   color: #969696;
 }
+
 .social {
   font-family: Raleway Web, sans-serif;
   display: flex;
   flex-flow: column;
   text-align: left;
 }
+.social a {
+  color: white;
+}
+
 ol,
 ul {
   list-style: none;
@@ -375,31 +392,185 @@ ul {
   list-style-image: initial;
   list-style-type: none;
 }
+
 .social li {
   display: inline-block;
 }
+
 li {
   display: list-item;
 }
-/* Mobile first CSS */
 
-.carousel-cell {
-  width: 100%;
-  text-align: center;
+.flickity-page-dots {
+  position: relative;
+  bottom: unset;
+  padding: 2% 0;
 }
 
-/* media query example */
-@media screen and (min-width: 600px) {
+.flickity-viewport {
+  height: 35vmax;
+}
+
+.add-item {
+  padding: 2%;
+  font-size: 1rem;
+  background: black;
+  color: white;
+  text-align: center;
+  width: fit-content;
+}
+
+/* Mobile first CSS
+
   .carousel-cell {
-    width: 50%;
+    width: 100%;
+    text-align: center;
+  } */
+/* media query */
+@media only screen and (min-width: 250px) and (max-width: 600px) {
+  .banner .container {
+    flex-flow: column nowrap;
   }
+  .banner .container .collection {
+    font-size: 1rem;
+  }
+  .banner .container .seasons {
+    font-size: 2rem;
+  }
+
+  .container {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 2% 0;
+  }
+  .container .logo {
+    order: 1;
+  }
+  .container .cart {
+    order: 2;
+  }
+  .container .main-navigation {
+    border-top: 1px solid gray;
+    margin-top: 1%;
+    order: 3;
+  }
+  .container .main-navigation ul {
+    display: inline-flex;
+    justify-content: space-evenly;
+  }
+  .container .main-navigation ul li {
+    padding: 0;
+    margin: 3% 1%;
+  }
+
+  .about .about-text {
+    margin: 0;
+    width: 100%;
+  }
+  .about .about-text h2 {
+    width: 100%;
+  }
+  .about .about-text p {
+    width: 100%;
+    font-size: 1rem;
+  }
+
   .site-footer .container {
     display: flex;
-    justify-content: space-between;
+    flex-flow: column nowrap;
+  }
+
+  .products {
+    height: 70vmax;
+  }
+  .products .product-categories {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: repeat(4, auto);
+  }
+  .products .product-categories :nth-child(1) {
+    grid-column: 1/span 2;
+  }
+  .products .product-categories :nth-child(2) {
+    grid-row: 2;
+  }
+  .products .product-categories :nth-child(3) {
+    grid-row: 2;
+    grid-column: 2/2;
+  }
+  .products .product-categories :nth-child(4) {
+    grid-row: 3;
+  }
+  .products .product-categories :nth-child(5) {
+    grid-row: 3;
+    grid-column: 2/2;
+  }
+  .products .product-categories :nth-child(6) {
+    grid-row: 4;
+    grid-column: 1/span 2;
+  }
+
+  .carousel-cell > p,
+.carousel-cell h3 {
+    text-align: center;
+  }
+
+  .newsletter {
+    width: 100%;
+    padding: 1%;
+    height: inherit;
+  }
+  .newsletter .container {
+    width: 100%;
+  }
+  .newsletter .container h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  .newsletter .container p {
+    font-size: 1rem;
+  }
+  .newsletter .container form {
+    text-align: center;
+    display: inline-flex;
+    align-content: center;
+    justify-content: center;
+    padding: 3% 0;
+    width: 100%;
+  }
+  .newsletter .container form #your-email {
+    width: 100%;
+    font-size: 1rem;
+  }
+  .newsletter .container form #subscribe {
+    width: fit-content;
+    font-size: 1rem;
+    border-radius: 100;
+    right: -5vmax;
+    position: absolute;
+    margin-top: 1%;
+  }
+
+  .flickity-viewport {
+    width: 100%;
+  }
+
+  .colophon p {
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  .site-footer .container .social {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    justify-content: space-evenly;
+    padding: 0;
+  }
+  .site-footer .container .social span {
+    display: none;
   }
 }
-@media screen and (min-width: 1240px) {
-  .carousel-cell {
-    width: 50%;
-  }
-}
+
+/*# sourceMappingURL=style.css.map */
