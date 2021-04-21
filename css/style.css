@@ -32,7 +32,7 @@ html {
   order: 1;
   width: auto;
   height: 5vmax;
-  padding-left: 1%;
+  padding-left: 10%;
 }
 
 img {
@@ -90,7 +90,13 @@ h3 {
 
 /* Section Banner */
 .banner {
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0, rgba(0, 0, 0, 0.25)), url(../images/banner-girl.png) no-repeat center 60px, url(../images/flower-bkgd.jpg) repeat-x top;
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.25) 0,
+      rgba(0, 0, 0, 0.25)
+    ),
+    url(../images/banner-girl.png) no-repeat center 60px,
+    url(../images/flower-bkgd.jpg) repeat-x top;
   background-size: cover, 20vmax;
   background-position: center, bottom;
   height: 60vmax;
@@ -214,7 +220,7 @@ h2 {
   background-size: cover;
   background-position: right;
   background-image: url(../images/mens-category.jpg);
-  grid-column: 1/span 2;
+  grid-column: 1 / span 2;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -287,7 +293,12 @@ h2 {
 
 /* Section Newsletter */
 .newsletter {
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.15) 0, rgba(0, 0, 0, 0.15)), url(../images/wave-bkgd.jpg) no-repeat bottom;
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.15) 0,
+      rgba(0, 0, 0, 0.15)
+    ),
+    url(../images/wave-bkgd.jpg) no-repeat bottom;
   background-size: cover;
   color: #fff;
   width: 100%;
@@ -489,7 +500,7 @@ li {
     grid-template-rows: repeat(4, auto);
   }
   .products .product-categories :nth-child(1) {
-    grid-column: 1/span 2;
+    grid-column: 1 / span 2;
   }
   .products .product-categories :nth-child(2) {
     grid-row: 2;
@@ -507,11 +518,11 @@ li {
   }
   .products .product-categories :nth-child(6) {
     grid-row: 4;
-    grid-column: 1/span 2;
+    grid-column: 1 / span 2;
   }
 
   .carousel-cell > p,
-.carousel-cell h3 {
+  .carousel-cell h3 {
     text-align: center;
   }
 
